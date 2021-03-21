@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    
+    <title>Hello!</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>  
+  <body>
+    <h1>THE MEMORY GAME</h1>
+    
+    <p>
+      Welcome to the memory pattern game! Click the buttons in the right order to win.
+    </p>
+    
+    
+    <div id="optionsection">
+      <div class="option">
+        <input type="checkbox" id="timerswitch" class="optioncheck">
+        <p class="optiontext"> Enable timer </p>
+      </div>
+      
+      <div class="option">
+        <input type="checkbox" id="multipletryswitch" class="optioncheck">
+        <p class="optiontext"> 3 mistakes allowed </p>
+      </div>
+    </div>
+    <p>
+      (If you change these options, the game is stopped and a new game must begin.)
+    </p>
+    
+    
+    <div class="centered">
+      <button id="startBtn" class="gameButton" onclick="startGame()">
+        Start
+      </button>
+      <button id="stopBtn" class="gameButton hidden" onclick="stopGame()">
+        Stop
+      </button>
+    </div>
+    
+    
+    <p id="mistakeCounter">
+      Mistakes: 0
+    </p>
+    
+    <p id="timerCounter">
+      Time left: ...
+    </p>
+    
+    <div id="gameButtonArea">
+      <button id="button1" onmousedown="startTone(1)" onmouseup="stopTone()" onclick="guess(1)"></button>
+      <button id="button2" onmousedown="startTone(2)" onmouseup="stopTone()" onclick="guess(2)"></button>
+      <button id="button3" onmousedown="startTone(3)" onmouseup="stopTone()" onclick="guess(3)"></button>
+      <button id="button4" onmousedown="startTone(4)" onmouseup="stopTone()" onclick="guess(4)"></button>
+      <button id="button5" onmousedown="startTone(5)" onmouseup="stopTone()" onclick="guess(5)"></button>
+      <button id="button6" onmousedown="startTone(6)" onmouseup="stopTone()" onclick="guess(6)"></button>
+    </div>
+  </body>
+</html>
